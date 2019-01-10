@@ -18,6 +18,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+"use strict";
+
 var fs = require("fs");
 
 // Print usage
@@ -27,15 +29,15 @@ function usage() {
 }
 
 function uglify(data) {
-    return data = JSON.stringify(JSON.parse(data));
+    return JSON.stringify(JSON.parse(data));
 }
 
 if (process.argv.length < 3) {
     usage();
 } else {
-    filename = process.argv[2];
-    file = fs.readFileSync(filename, 'utf8');
+    var filename = process.argv[2];
+    var file = fs.readFileSync(filename, "utf8");
 
     // Create or replace existing file
-    fs.writeFileSync(filename.replace("nexus","nxs"), uglify(file));
+    fs.writeFileSync(filename.replace("nexus", "nxs"), uglify(file));
 }
