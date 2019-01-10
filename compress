@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 /*
-compress - Compress .nexus file into Nexus Client settings .nxs file
+compress v1.0 - Compress .nexus file into Nexus Client settings .nxs file
+Get the latest version at: https://github.com/GustavBertram/nxs-tools
+
 Copyright (C) 2018 Gustav W. Bertram
 
 This program is free software: you can redistribute it and/or modify
